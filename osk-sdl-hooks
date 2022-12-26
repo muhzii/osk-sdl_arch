@@ -41,7 +41,7 @@ EOF
 
                 #loop until we get a real password
                 while ! [ -b "/dev/mapper/${cryptname}" ]; do
-                   osk-sdl -G -d ${resolved} -n ${cryptname} -c /etc/osk.conf
+                   osk-sdl -s -G -d ${resolved} -n ${cryptname} -c /etc/osk.conf
                 done
             fi
             if [ -e "/dev/mapper/${cryptname}" ]; then
